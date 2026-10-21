@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Horizon - Sitio Web Oficial</title>
+
+    <!-- PWA Configuración -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#080808">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="img/logosinfondo.png">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="#hero"><img src="img/logosinfondo.png" alt="Toxic Horizon Logo"></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+
+                <!-- Desplegable 1: El Juego (Puntos 2, 3, 4, 5, 6) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        El Juego <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Universo</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#descripcion">Historia y Lore</a></li>
+                                    <li><a href="#caracteristicas">Mecánicas de Juego</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Multimedia</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#trailer">Tráiler Oficial</a></li>
+                                    <li><a href="#gallery">Galería de Capturas</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Guía</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#tutorial">Controles y Reglas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 2: Descarga e Instalación (Puntos 7, 8, 9) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        Jugar <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu menu-compact">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Instalador</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#descarga">Descarga APK</a></li>
+                                    <li><a href="#instalacion">Guía de Instalación</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Compatibilidad</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#requisitos">Requisitos Mínimos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 3: Proyecto (Puntos 10, 11, 12, 19) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        Proyecto <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu menu-compact">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Desarrollo</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#desarrollo">Bitácora de Sprints</a></li>
+                                    <li><a href="#tecnologias">Stack y Motor</a></li>
+                                    <li><a href="#declaracion-ia">Uso de I.A.</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Equipo</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#equipo">Integrantes y Roles</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Desplegable 4: Legal & Contacto (Puntos 13, 14, 15, 16, 17, 18) -->
+                <li class="dropdown-item">
+                    <button type="button" class="dropdown-trigger">
+                        Legal <span class="arrow-icon">▾</span>
+                    </button>
+                    <div class="mega-menu menu-compact">
+                        <div class="mega-menu-grid">
+                            <div class="mega-col">
+                                <h4>Normativa</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#creditos-licencias">Créditos y Recursos</a></li>
+                                    <li><a href="#licencias">Licencias de Código</a></li>
+                                    <li><a href="#privacidad">Aviso de Privacidad</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-col">
+                                <h4>Avisos</h4>
+                                <ul class="mega-sublist">
+                                    <li><a href="#advertencias">Clasificación y Contenido</a></li>
+                                    <li><a href="#disclaimer">Descargo Académico</a></li>
+                                    <li><a href="#contacto">Contacto y Soporte</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#descarga" class="btn-primary-mini">Descargar</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- 4. TRÁILER & 5. GALERÍA (#trailer y #gallery ya los tienes definidos) -->
+    <section id="hero" class="hero-header">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>RECLAMA TU FUTURO.</h1>
+                <h2>Enfréntate al apocalipsis. Domina el horizonte.</h2>
+                <div class="hero-btns">
+                    <a href="#trailer" class="btn-primary">Ver Tráiler</a>
+                </div>
+            </div>
+            <div class="hero-interactive-element">
+                <img src="img/logosinfondo.png" alt="Personaje Principal" class="floating-character">
+            </div>
+        </div>
+    </section>
+
+    <section id="trailer" class="trailer-section">
+    <div class="section-container">
+        <h2>TRÁILER DE REVELACIÓN</h2>
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/3EfLGTf4Y-8" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- 2. DESCRIPCIÓN & 3. CARACTERÍSTICAS -->
+<section id="descripcion" class="content-section">
+    <div class="section-container">
+        <h2>SOBRE TOXIC HORIZON</h2>
+        <div class="card-grid">
+            <div class="interactive-card tech-card">
+                <h3>Ficha Técnica</h3>
+
+                <div class ="info-item">
+                <span class="info-label">Género:</span>
+                    <p class="info-value"> Acción y Supervivencia Postapocalíptica.</p>
+                </div>
+
+                <div class ="info-item">
+                <span class="info-label">Público Objetivo:</span>
+                    <p class="info-value"> Jugadores mayores de 12 años interesados en los videojuegos de exploración y acción, 
+                    que disfrutan de la recuperación de ecosistemas contaminados, la gestión estratégica de recursos, 
+                    la exploración táctica y el combate dinámico. Está dirigido a quienes buscan una experiencia de juego que 
+                    combine desafíos, estrategia y conciencia ambiental.</p>
+                </div>
+
+                <div class ="info-item">
+                    <span class="info-label">Objetivo:</span>
+                    <p class="info-value"> Videojuego interactivo que fomente la educación ambiental mediante dinámicas 
+                        de juego enfocadas en la recuperación y restauración de los ecosistemas mediante combates RPG/daugeons.</p>
+                </div>
+            </div>
+
+            <div class="interactive-card" id="caracteristicas">
+                <h3>Características Clave</h3>
+                <ul class="bullet-list">
+                    <li>
+                        <span class="bullet-icon"></span>
+                        <span class="bullet-text">Sistema de combate cuerpo a cuerpo y a distancia contra mutantes adaptativos.</span>
+                    </li>
+                    <li>
+                        <span class="bullet-icon"></span>
+                        <span class="bullet-text">Mecánica de purificación de biomas en tiempo real.</span>
+                    </li>
+                    <li>
+                        <span class="bullet-icon"></span>
+                        <span class="bullet-text">Gestión de oxígeno, radiación y recursos de supervivencia.</span>
+                    </li>
+                    <li>
+                        <span class="bullet-icon"></span>
+                        <span class="bullet-text">Eventos climáticos radiactivos aleatorios.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. TUTORIAL Y CONTROLES -->
+<section id="tutorial" class="content-section">
+    <div class="section-container">
+        <h2>INSTRUCCIONES Y CONTROLES</h2>
+        <div class="card-grid">
+
+            <div class="interactive-card">
+                <h3>Reglas de Supervivencia</h3>
+                <div class="rule-item">
+                        <span class="rule-number">01</span>
+                        <div class="rule-text">
+                            <strong>Medidor de Radiación:</strong> Mantén vigilado tu medidor en las zonas rojas para evitar daño continuo.
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-number">02</span>
+                        <div class="rule-text">
+                            <strong>Recolección Biológica:</strong> Recolecta componentes biológicos para sintetizar combustible de purificación.
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-number">03</span>
+                        <div class="rule-text">
+                            <strong>Refugio y Evacuación:</strong> Regresa al refugio antes de que caiga la tormenta ácida sobre el mapa.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interactive-card">
+                <h3>CONTROLES DE MOVIMIENTO</h3>
+                <div class="controls-list">
+                    
+                    <div class="control-row">
+                        <span class="control-action">Mover personaje</span>
+                        <div class="keys-group">
+                            <kbd class="key-badge" title="Arriba">W (Arriba)</kbd>
+                            <kbd class="key-badge" title="Izquierda">A (Izquierda)</kbd>
+                            <kbd class="key-badge" title="Abajo">S (Abajo)</kbd>
+                            <kbd class="key-badge" title="Derecha">D (Derecha)</kbd>
+                        </div>
+                    </div>
+
+                    <div class="control-row">
+                    <span class="control-action">Ataque</span>
+                    <div class="keys-group">
+                    <span class="mouse-badge">Botón Derecho en el Pad</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ============================================================
+     SECCIÓN LORE & FACCIONES (CÓDICE INTERACTIVO)
+============================================================= -->
+<section id="lore" class="content-section lore-characters-section">
+    <div class="section-container">
+        <h2>LORE Y FACCIONES</h2>
+        <p class="section-subtitle">Archivos clasificados y registros del mundo tras el colapso</p>
+
+        <div class="lore-grid">
+
+            <!-- 1. EL GRAN COLAPSO -->
+            <div class="lore-card border-purple">
+                <div class="lore-card-header">
+                    <div class="lore-badge-group">
+                        <span class="lore-id">ARCH-01</span>
+                        <span class="lore-category cat-event">EVENTO GLOBAL</span>
+                    </div>
+                </div>
+                <div class="lore-body">
+                    <h3>EL GRAN COLAPSO</h3>
+                    <p>La Tercera Guerra Mundial dejó un planeta sumergido en radiación, desechos tóxicos y ecosistemas enteros al borde de la extinción total.</p>
+                </div>
+                <div class="lore-footer">
+                    <button type="button" class="btn-lore-action" data-archive="colapso" onclick="openModal('colapso')">
+                        <span>ACCEDER AL ARCHIVO</span>
+                        <span class="arrow-lore">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. LAS CRIATURAS MUTADAS -->
+            <div class="lore-card border-green">
+                <div class="lore-card-header">
+                    <div class="lore-badge-group">
+                        <span class="lore-id">ARCH-02</span>
+                        <span class="lore-category cat-mutant">BESTIARIO MUTANTE</span>
+                    </div>
+                </div>
+                <div class="lore-body">
+                    <h3>LAS CRIATURAS MUTADAS</h3>
+                    <p>Engendradas por la lluvia ácida radiactiva y fallos de laboratorio militar, acechan en las sombras a los últimos refugios humanos.</p>
+                </div>
+                <div class="lore-footer">
+                    <button type="button" class="btn-lore-action" data-archive="criaturas" onclick="openModal('criaturas')">
+                        <span>ACCEDER AL ARCHIVO</span>
+                        <span class="arrow-lore">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. KAELL: EL SOBREVIVIENTE -->
+            <div class="lore-card border-green">
+                <div class="lore-card-header">
+                    <div class="lore-badge-group">
+                        <span class="lore-id">ARCH-03</span>
+                        <span class="lore-category cat-hero">RESISTENCIA</span>
+                    </div>
+                </div>
+                <div class="lore-body">
+                    <h3>KAELL: EL SOBREVIVIENTE</h3>
+                    <p>Tras perder su asentamiento en un brutal asalto, Kaell emprende el combate armado para rescatar el futuro de los supervivientes.</p>
+                </div>
+                <div class="lore-footer">
+                    <button type="button" class="btn-lore-action" data-archive="kaell" onclick="openModal('kaell')">
+                        <span>ACCEDER AL ARCHIVO</span>
+                        <span class="arrow-lore">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. LAS SEMILLAS DEL EDÉN -->
+            <div class="lore-card border-purple">
+                <div class="lore-card-header">
+                    <div class="lore-badge-group">
+                        <span class="lore-id">ARCH-04</span>
+                        <span class="lore-category cat-tech">BIO-TECNOLOGÍA</span>
+                    </div>
+                </div>
+                <div class="lore-body">
+                    <h3>LAS SEMILLAS DEL EDÉN</h3>
+                    <p>Módulos de bioingeniería experimental capaces de neutralizar la toxicidad del suelo y reactivar la vida vegetal en las zonas muertas.</p>
+                </div>
+                <div class="lore-footer">
+                    <button type="button" class="btn-lore-action" data-archive="semillas" onclick="openModal('semillas')">
+                        <span>ACCEDER AL ARCHIVO</span>
+                        <span class="arrow-lore">→</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTENEDOR MODAL DE VISUALIZACIÓN -->
+<div id="lore-modal" class="modal-overlay">
+    <div class="modal-window">
+        <button type="button" class="modal-close-btn" id="modal-close">&times;</button>
+        <div class="modal-header-tag">
+            <span id="modal-badge" class="lore-category">REGISTRO CLASIFICADO</span>
+            <span id="modal-id" class="lore-id">ARCH-00</span>
+        </div>
+        <h3 id="modal-title" class="modal-game-title">TÍTULO DEL ARCHIVO</h3>
+        <div id="modal-body-content" class="modal-text-content">
+            <!-- El contenido se inyecta desde JavaScript -->
+        </div>
+    </div>
+</div>
+                        <!-- VENTANA MODAL PARA LOS ARCHIVOS DE LORE -->
+<div id="lore-modal" class="modal-overlay">
+    <div class="modal-window">
+        <button type="button" class="modal-close-btn" id="modal-close">&times;</button>
+        <div class="modal-header-tag">
+            <span id="modal-badge" class="lore-category">REGISTRO CLASIFICADO</span>
+            <span id="modal-id" class="lore-id">ARCH-00</span>
+        </div>
+        <h3 id="modal-title" class="modal-game-title">TÍTULO DEL ARCHIVO</h3>
+        <div id="modal-body-content" class="modal-text-content">
+            <!-- El texto completo se inserta dinámicamente -->
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ============================================================
+     SECCIÓN GALERÍA DE MEDIOS Y SPRITES
+============================================================= -->
+<section id="gallery" class="content-section">
+    <div class="section-container">
+        <h2>GALERÍA DE MEDIOS</h2>
+        <p class="section-subtitle">Sprites originales y capturas de la versión oficial</p>
+
+        <div class="pixel-gallery-grid">
+            
+            <!-- Item 1: Kaell (Idle) -->
+            <div class="pixel-card">
+                <div class="pixel-badge hero-badge">PROTAGONISTA</div>
+                <div class="pixel-display">
+                    <img src="img/personaje_1.jpeg" alt="Kaell - Modo Reposo" class="pixel-sprite">
+                </div>
+                <div class="pixel-meta">
+                    <h4>Kaell</h4>
+                    <span class="pixel-tag">Modo Exploración</span>
+                </div>
+            </div>
+
+            <!-- Item 2: Kaell (Combate) -->
+            <div class="pixel-card">
+                <div class="pixel-badge combat-badge">COMBATE</div>
+                <div class="pixel-display">
+                    <img src="img/personaje_2.jpeg" alt="Kaell - Con Espada" class="pixel-sprite">
+                </div>
+                <div class="pixel-meta">
+                    <h4>Kaell (Armado)</h4>
+                    <span class="pixel-tag">Postura de Ataque</span>
+                </div>
+            </div>
+
+            <!-- Item 3: Mutante (Pasivo) -->
+            <div class="pixel-card">
+                <div class="pixel-badge mutant-badge">MUTANTE</div>
+                <div class="pixel-display">
+                    <img src="img/personaje_3.jpeg" alt="Espécimen Radiactivo" class="pixel-sprite">
+                </div>
+                <div class="pixel-meta">
+                    <h4>Bípedo Radiactivo</h4>
+                    <span class="pixel-tag">Fase 1 (Vigilante)</span>
+                </div>
+            </div>
+
+            <!-- Item 4: Mutante (Agresivo) -->
+            <div class="pixel-card">
+                <div class="pixel-badge danger-badge">ENEMIGO HOSTIL</div>
+                <div class="pixel-display">
+                    <img src="img/personaje_4.jpeg" alt="Mutante Furia" class="pixel-sprite">
+                </div>
+                <div class="pixel-meta">
+                    <h4>Bípedo Furia</h4>
+                    <span class="pixel-tag">Fase 2 (Ataque Fauces)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN -->
+<section id="descarga" class="content-section download-box">
+    <div class="section-container">
+        <h2>ZONA DE DESCARGA</h2>
+
+        <div class="download-layout">
+            <!-- 1. TARJETA DE VERSIÓN Y BOTÓN -->
+            <div class="download-card launch-card">
+                <div class="card-status-badge">
+                    <span class="status-pulse"></span> VERSIÓN PÚBLICA
+                </div>
+                <h3 class="game-build-title">TOXIC HORIZON</h3>
+                <span class="build-tag">Build 1.0.0 — Beta Académica</span>
+
+                <div class="build-specs-grid">
+                    <div class="spec-cell">
+                        <span class="spec-label">PLATAFORMA</span>
+                        <span class="spec-value">Windows (.exe)</span>
+                    </div>
+                    <div class="spec-cell">
+                        <span class="spec-label">TAMAÑO</span>
+                        <span class="spec-value">145 MB</span>
+                    </div>
+                    <div class="spec-cell">
+                        <span class="spec-label">ARQUITECTURA</span>
+                        <span class="spec-value">x64 bits</span>
+                    </div>
+                    <div class="spec-cell">
+                        <span class="spec-label">ESTADO</span>
+                        <span class="spec-value green-text">Listo</span>
+                    </div>
+                </div>
+
+                <a href="descargas/ToxicHorizon_Setup.exe" download class="btn-download-cyber">
+                    <span class="download-icon">⬇</span>
+                    <span class="download-text">DESCARGAR EJECUTABLE</span>
+                </a>
+            </div>
+
+            <div class="interactive-card" id="requisitos">
+                <h3>Requisitos del Sistema</h3>
+                <ul class="bullet-list">
+                    <li><strong>SO:</strong> Windows 10 o superior.</li>
+                    <li><strong>Procesador:</strong> Octa-core 2.0 GHz o equivalente.</li>
+                    <li><strong>Memoria RAM:</strong> 3 GB mínimo (4 GB recomendado).</li>
+                    <li><strong>Almacenamiento:</strong> 300 MB de espacio libre disponible.</li>
+                </ul>
+            </div>
+            <!-- 2. REQUISITOS DEL SISTEMA (BENCHMARK) -->
+            <div class="download-card req-card" id="requisitos">
+                <div class="card-head-simple">
+                    <h3>ESPECIFICACIONES DEL SISTEMA</h3>
+                </div>
+                
+                <div class="benchmark-grid">
+                    <div class="benchmark-item">
+                        <span class="bench-label">SISTEMA OPERATIVO</span>
+                        <strong class="bench-val">Windows 10 / 11 (64-bit)</strong>
+                    </div>
+                    <div class="benchmark-item">
+                        <span class="bench-label">PROCESADOR (CPU)</span>
+                        <strong class="bench-val">Dual Core 2.0 GHz o superior</strong>
+                    </div>
+                    <div class="benchmark-item">
+                        <span class="bench-label">MEMORIA RAM</span>
+                        <strong class="bench-val">3 GB Mínimo <span class="rec-pill">4 GB Rec.</span></strong>
+                    </div>
+                    <div class="benchmark-item">
+                        <span class="bench-label">ALMACENAMIENTO LIBRE</span>
+                        <strong class="bench-val">300 MB en disco</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="steps-stepper">
+                    <div class="step-card">
+                        <div class="step-index">01</div>
+                        <div class="step-info">
+                            <h4>Descargar</h4>
+                            <p>Obtén el instalador oficial <code>.exe</code> con el botón superior.</p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-index">02</div>
+                        <div class="step-info">
+                            <h4>Ubicación</h4>
+                            <p>Guarda el archivo en tu carpeta de descargas o escritorio.</p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-index">03</div>
+                        <div class="step-info">
+                            <h4>Ejecutar</h4>
+                            <p>Haz doble clic sobre el archivo ejecutable descargado.</p>
+                        </div>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-index">04</div>
+                        <div class="step-info">
+                            <h4>Jugar</h4>
+                            <p>Concede permisos de inicio en Windows y disfruta el juego.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 10. DESARROLLO, 11. EQUIPO, 12. TECNOLOGÍAS Y 19. USO DE IA -->
+<section id="desarrollo" class="content-section">
+    <div class="section-container">
+        <h2>DESARROLLO Y PRODUCCIÓN</h2>
+        <div class="card-grid">
+            <div class="interactive-card development-card">
+                <h3>Bitácora de Sprints</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                       <div class="timeline-marker sprint-active">S1</div> 
+                       <div class="timeline-content">
+                        <h4>Sprint 1: Cimientos del Proyecto</h4>
+                        <p>Prototipado rápido, definición del concepto visual y 
+                            lógica básica de movimiento del personaje.</p>
+                       </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker sprint-active">S2</div>
+                        <div class="timeline-content">
+                            <h4>Sprint 2: Mecánicas de Combate</h4>
+                            <p>Programación de comportamiento para mutantes, sistema de ataque iteractivo
+                                y colisiones básicas. </p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker sprint-active">S3</div>
+                            <div class="timeline-content">
+                                <h4>Sprint 3: Balance y pulido</h4>
+                                <p>Corrección de bugs, optimización de recursos, ajustes de dificultad,
+                                    y creación de entornos postapocalípticos.</p>
+                            </div>
+                        </div>
+            </div>
+            
+            <div class="interactive-card team-card">
+                <h3>EQUIPO DE DESARROLLO</h3>
+                <div class="team-list">
+                    <div class="team-member">
+                        <div class="member-info">
+                            <span class="member-name">Martha Julieta González Meléndez</span>
+                            <span class="member-role dev-lead">Desarrolladora / Programación General</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-info">
+                            <span class="member-name">Mariana Antonio Hernández</span>
+                            <span class="member-role art-design">Diseño de Personajes y Programación</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-info">
+                            <span class="member-name">Lizbeth Ruiz González</span>
+                            <span class="member-role art-design">Programación General y Colaboradora</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-info">
+                            <span class="member-name">Raúl Emmanuel Márquez Hernández</span>
+                            <span class="member-role dev-lead">Programación General y Desarrollador</span>
+                        </div>
+                    </div>
+                    <div class="team-badge">Equipo Toxic Horizon</div>
+                </div>
+            </div>
+
+
+            <div class="interactive-card tech-card-new">
+                <h3>TECNOLOGÍAS UTILIZADAS</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-category">MOTOR Y ENTORNO</span>
+                        <p class="tech-name">Motor de juego compatible con dispositivos móviles y Entorno Web</p>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-category">LENGUAJES</span>
+                        <div class="tech-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-category">HERRAMIENTAS</span>
+                        <div class="tech-tags">
+                            <span class="tag tool">VS Code</span>
+                            <span class="tag tool">Git / GitHub</span>
+                            <span class="tag tool">Unity</span>
+                            <span class="tag tool">Canva</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 13 a 18: LEGAL, CRÉDITOS, ADVERTENCIAS Y CONTACTO -->
+<section id="creditos-licencias" class="content-section">
+    <div class="section-container">
+        <h2>MARCO LEGAL Y CRÉDITOS</h2>
+        <div class="legal-grid">
+
+            <div class="legal-card border-purple">
+                <div class="legal-header">
+                    <span class="legal-icon icon-purple">🎵</span>
+                    <h3>CRÉDITOS Y RECURSOS</h3>
+                </div>
+                <div class="legal-content">
+                    <p>Elementos de audio, SFX y texturas ambientales obtenidos de librerías de uso libre.</p>
+                    <div class="source-badges">
+                        <span class="source-tag">Freesound</span>
+                        <span class="source-tag">OpenGameArt</span>
+                        <span class="license-badge">CC0 License</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-card border-green">
+                <div class="legal-header">
+                    <span class="legal-icon icon-green">📄</span>
+                    <h3>LICENCIAS</h3>
+                </div>
+                <div class="legal-content">
+                    <p>El código fuente y la documentación académica se distribuyen libremente 
+                        bajo la siguiente normativa internacional:</p>
+                    <div class="license-box">
+                        <span class="license-type">MIT LICENSE</span>
+                    </div>
+                    <p class="legal-subtext">Los activos de marca, lore y logotipos originales pertenecen 
+                        al equipo de desarrollo.</p>
+                </div>
+            </div>
+
+            <div class="legal-card border-purple">
+                <div class="legal-header">
+                    <span class="legal-icon icon-purple">🔒</span>
+                    <h3>AVISO DE PRIVACIDAD</h3>
+                </div>
+                <div class="legal-content">
+                    <div class="security-banner">
+                        <span class="sec-dot"></span> 100% SEGURO
+                    </div>
+                    <p><strong>Toxic Horizon</strong> no recopila, almacena, comparte ni transmite ningún tipo de dato personal, 
+                        de ubicación o información sensible de los jugadores.</p>
+                </div>
+            </div>
+
+            <div class="legal-card border-green">
+                <div class="legal-header">
+                    <span class="legal-icon icon-green">⚠️</span>
+                    <h3>ADVERTENCIAS Y CLASIFICACIÓN</h3>
+                </div>
+                <div class="legal-content">
+                    <div class="rating-badge">T (Teen) / +13</div>
+                    <p>Recomendado para mayores de 13 años. Contiene escenas de combate fantástico contra mutantes, 
+                        atmósfera de tensión y efectos visuales de radiación.</p>
+                </div>
+            </div>
+
+            <div class="legal-card border-purple">
+                <div class="legal-header">
+                    <span class="legal-icon icon-purple">🎓</span>
+                    <h3>DESCARGO DE RESPONSABILIDAD</h3>
+                </div>
+                <div class="legal-content">
+                    <div class="academic-tag">PROYECTO ACADÉMICO</div>
+                    <p>Esta entrega se proporciona <strong>"tal cual" (as-is)</strong>, con fines estrictamente académicos y sin garantías de compatibilidad o soporte técnico comercial.</p>
+                </div>
+            </div>
+
+            <div class="legal-card border-green">
+                <div class="legal-header">
+                    <span class="legal-icon icon-green">✉️</span>
+                    <h3>CONTACTO</h3>
+                </div>
+                <div class="legal-content animate-pulse-border">
+                    <p>¿Encontraste algún bug, error o tienes alguna duda académica sobre este proyecto?</p>
+                    <a href="https://github.com/juli-mzz" target="_blank" class="legal-btn">
+                        <span>REPOSITORIO DE GITHUB</span>
+                        <span class="arrow-right">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="main-footer">
+        <div class="section-container">
+            <p>&copy; 2026 Toxic Horizon Studio. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- VENTANAS MODALES (HISTORIA Y LORE DE TOXIC HORIZON) -->
+
+    <!-- Modal 1: El Gran Colapso -->
+    <div id="modal-colapso" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>EL GRAN COLAPSO</h2>
+            <div class="modal-body">
+                <p>La Tercera Guerra Mundial no solo devastó las ciudades con armamento 
+                    nuclear y biológico, sino que destruyó el equilibrio ecológico del planeta.
+                     La contaminación química extrema y la lluvia radiactiva convirtieron la 
+                     atmósfera en un entorno letal.</p>
+                <p>Los pocos sobrevivientes que quedan en la Tierra se ven obligados a 
+                    vivir hacinados en campamentos improvisados y refugios subterráneos, 
+                    luchando a diario por agua limpia, alimentos y medicinas en un mundo 
+                    sin vida natural.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Las Criaturas Mutadas -->
+    <div id="modal-criaturas" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>LAS ABERRACIONES DEL HORIZONTE</h2>
+            <div class="modal-body">
+                <p>De la combinación de desechos tóxicos, radiación acumulada 
+                    y proyectos de una Inteligencia Artificial militar que operaba 
+                    sin supervisión durante la guerra, nacieron las criaturas mutadas.</p>
+                <p>Estas abominaciones no son simples animales radioactivos; 
+                    poseen un comportamiento hostil coordinado y avanzan 
+                    constantemente hacia las zonas habitadas para erradicar 
+                    cualquier rastro de vida humana.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Kaell -->
+    <div id="modal-kaell" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>KAELL: EL CAMINO DEL SOBREVIVIENTE</h2>
+            <div class="modal-body">
+                <p>El jugador encarna a Kaell, un joven sobreviviente cuya vida cambia 
+                    drásticamente cuando su refugio es arrasado por una horda de mutantes. 
+                    Tras ser rescatado por un grupo de exploradores, se une a sus filas.</p>
+                <p>Su misión consistirá en adentrarse en los territorios más peligrosos, 
+                    recolectar recursos clave para los campamentos de sobrevivientes y 
+                    desentrañar los oscuros secretos de la I.A. militar que originó el 
+                    apocalipsis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Las Semillas del Edén -->
+    <div id="modal-semillas" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>LAS SEMILLAS DEL EDÉN</h2>
+            <div class="modal-body">
+                <p>Las "Semillas del Edén" representan la única oportunidad real para la Tierra. 
+                    Son dispositivos tecnológicos de alta ingeniería diseñados para neutralizar la 
+                    contaminación y la radiación a nivel molecular.</p>
+                <p>Al desplegar una Semilla del Edén en un sector infectado, 
+                    el jugador logra purificar el aire y la tierra, devolviendo la vegetación y 
+                    creando zonas seguras donde la vida humana puede prosperar de nuevo.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animation.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
