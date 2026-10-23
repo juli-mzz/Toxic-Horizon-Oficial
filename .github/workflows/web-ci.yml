@@ -39,3 +39,4 @@ jobs:
 
       - name: Validate HTML, CSS and JavaScript
         run: npm run check
+        continue-on-error: false
