@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toxic Horizon - Sitio Web Oficial</title>
-
-    <!-- PWA Configuración -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#080808">
     <meta name="mobile-web-app-capable" content="yes">
@@ -24,8 +22,6 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="#hero">Inicio</a></li>
-
-                <!-- Desplegable 1: El Juego (Puntos 2, 3, 4, 5, 6) -->
                 <li class="dropdown-item">
                     <button type="button" class="dropdown-trigger">
                         El Juego <span class="arrow-icon">▾</span>
@@ -55,8 +51,6 @@
                         </div>
                     </div>
                 </li>
-
-                <!-- Desplegable 2: Descarga e Instalación (Puntos 7, 8, 9) -->
                 <li class="dropdown-item">
                     <button type="button" class="dropdown-trigger">
                         Jugar <span class="arrow-icon">▾</span>
@@ -80,7 +74,6 @@
                     </div>
                 </li>
 
-                <!-- Desplegable 3: Proyecto (Puntos 10, 11, 12, 19) -->
                 <li class="dropdown-item">
                     <button type="button" class="dropdown-trigger">
                         Proyecto <span class="arrow-icon">▾</span>
@@ -105,7 +98,7 @@
                     </div>
                 </li>
 
-                <!-- Desplegable 4: Legal & Contacto (Puntos 13, 14, 15, 16, 17, 18) -->
+                <!--Legal y Contacto-->
                 <li class="dropdown-item">
                     <button type="button" class="dropdown-trigger">
                         Legal <span class="arrow-icon">▾</span>
@@ -138,8 +131,6 @@
     </div>
 </header>
 
-
-<!-- 4. TRÁILER & 5. GALERÍA (#trailer y #gallery ya los tienes definidos) -->
     <section id="hero" class="hero-header">
         <div class="hero-content">
             <div class="hero-text">
@@ -173,7 +164,6 @@
     </div>
 </section>
 
-<!-- 2. DESCRIPCIÓN & 3. CARACTERÍSTICAS -->
 <section id="descripcion" class="content-section">
     <div class="section-container">
         <h2>SOBRE TOXIC HORIZON</h2>
@@ -225,8 +215,6 @@
         </div>
     </div>
 </section>
-
-<!-- 6. TUTORIAL Y CONTROLES -->
 <section id="tutorial" class="content-section">
     <div class="section-container">
         <h2>INSTRUCCIONES Y CONTROLES</h2>
@@ -254,11 +242,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="interactive-card">
                 <h3>CONTROLES DE MOVIMIENTO</h3>
                 <div class="controls-list">
-                    
                     <div class="control-row">
                         <span class="control-action">Mover personaje</span>
                         <div class="keys-group">
@@ -268,7 +254,6 @@
                             <kbd class="key-badge" title="Derecha">D (Derecha)</kbd>
                         </div>
                     </div>
-
                     <div class="control-row">
                     <span class="control-action">Ataque</span>
                     <div class="keys-group">
@@ -278,19 +263,11 @@
         </div>
     </div>
 </section>
-
-
-    <!-- ============================================================
-     SECCIÓN LORE & FACCIONES (CÓDICE INTERACTIVO)
-============================================================= -->
 <section id="lore" class="content-section lore-characters-section">
     <div class="section-container">
         <h2>LORE Y FACCIONES</h2>
         <p class="section-subtitle">Archivos clasificados y registros del mundo tras el colapso</p>
-
         <div class="lore-grid">
-
-            <!-- 1. EL GRAN COLAPSO -->
             <div class="lore-card border-purple">
                 <div class="lore-card-header">
                     <div class="lore-badge-group">
@@ -309,8 +286,6 @@
                     </button>
                 </div>
             </div>
-
-            <!-- 2. LAS CRIATURAS MUTADAS -->
             <div class="lore-card border-green">
                 <div class="lore-card-header">
                     <div class="lore-badge-group">
@@ -329,8 +304,6 @@
                     </button>
                 </div>
             </div>
-
-            <!-- 3. KAELL: EL SOBREVIVIENTE -->
             <div class="lore-card border-green">
                 <div class="lore-card-header">
                     <div class="lore-badge-group">
@@ -349,8 +322,6 @@
                     </button>
                 </div>
             </div>
-
-            <!-- 4. LAS SEMILLAS DEL EDÉN -->
             <div class="lore-card border-purple">
                 <div class="lore-card-header">
                     <div class="lore-badge-group">
@@ -374,7 +345,6 @@
     </div>
 </section>
 
-<!-- CONTENEDOR MODAL DE VISUALIZACIÓN -->
 <div id="lore-modal" class="modal-overlay">
     <div class="modal-window">
         <button type="button" class="modal-close-btn" id="modal-close">&times;</button>
@@ -384,32 +354,24 @@
         </div>
         <h3 id="modal-title" class="modal-game-title">TÍTULO DEL ARCHIVO</h3>
         <div id="modal-body-content" class="modal-text-content">
-            <!-- El contenido se inyecta desde JavaScript -->
         </div>
     </div>
 </div>
-                        <!-- VENTANA MODAL PARA LOS ARCHIVOS DE LORE -->
-<div id="lore-modal" class="modal-overlay">
-    <div class="modal-window">
-        <button type="button" class="modal-close-btn" id="modal-close">&times;</button>
-        <div class="modal-header-tag">
+               <div id="lore-modal" class="modal-overlay">
+               <div class="modal-window">
+           <button type="button" class="modal-close-btn" id="modal-close">&times;</button>
+          <div class="modal-header-tag">
             <span id="modal-badge" class="lore-category">REGISTRO CLASIFICADO</span>
             <span id="modal-id" class="lore-id">ARCH-00</span>
-        </div>
-        <h3 id="modal-title" class="modal-game-title">TÍTULO DEL ARCHIVO</h3>
-        <div id="modal-body-content" class="modal-text-content">
-            <!-- El texto completo se inserta dinámicamente -->
+          </div>
+            <h3 id="modal-title" class="modal-game-title">TÍTULO DEL ARCHIVO</h3>
+            <div id="modal-body-content" class="modal-text-content">
         </div>
     </div>
 </div>
-
         </div>
     </div>
 </section>
-
-    <!-- ============================================================
-     SECCIÓN GALERÍA DE MEDIOS Y SPRITES
-============================================================= -->
 <section id="gallery" class="content-section">
     <div class="section-container">
         <h2>GALERÍA DE MEDIOS</h2>
@@ -417,7 +379,6 @@
 
         <div class="pixel-gallery-grid">
             
-            <!-- Item 1: Kaell (Idle) -->
             <div class="pixel-card">
                 <div class="pixel-badge hero-badge">PROTAGONISTA</div>
                 <div class="pixel-display">
@@ -429,7 +390,6 @@
                 </div>
             </div>
 
-            <!-- Item 2: Kaell (Combate) -->
             <div class="pixel-card">
                 <div class="pixel-badge combat-badge">COMBATE</div>
                 <div class="pixel-display">
@@ -441,7 +401,6 @@
                 </div>
             </div>
 
-            <!-- Item 3: Mutante (Pasivo) -->
             <div class="pixel-card">
                 <div class="pixel-badge mutant-badge">MUTANTE</div>
                 <div class="pixel-display">
@@ -453,7 +412,6 @@
                 </div>
             </div>
 
-            <!-- Item 4: Mutante (Agresivo) -->
             <div class="pixel-card">
                 <div class="pixel-badge danger-badge">ENEMIGO HOSTIL</div>
                 <div class="pixel-display">
@@ -467,15 +425,12 @@
 
         </div>
     </div>
-</section>
-
-    <!-- 7. DESCARGA, 8. REQUISITOS Y 9. INSTALACIÓN -->
+</section>   
 <section id="descarga" class="content-section download-box">
     <div class="section-container">
         <h2>ZONA DE DESCARGA</h2>
 
         <div class="download-layout">
-            <!-- 1. TARJETA DE VERSIÓN Y BOTÓN -->
             <div class="download-card launch-card">
                 <div class="card-status-badge">
                     <span class="status-pulse"></span> VERSIÓN PÚBLICA
@@ -507,7 +462,6 @@
                     <span class="download-text">DESCARGAR EJECUTABLE</span>
                 </a>
             </div>
-
             <div class="interactive-card" id="requisitos">
                 <h3>Requisitos del Sistema</h3>
                 <ul class="bullet-list">
@@ -517,12 +471,10 @@
                     <li><strong>Almacenamiento:</strong> 300 MB de espacio libre disponible.</li>
                 </ul>
             </div>
-            <!-- 2. REQUISITOS DEL SISTEMA (BENCHMARK) -->
             <div class="download-card req-card" id="requisitos">
                 <div class="card-head-simple">
                     <h3>ESPECIFICACIONES DEL SISTEMA</h3>
                 </div>
-                
                 <div class="benchmark-grid">
                     <div class="benchmark-item">
                         <span class="bench-label">SISTEMA OPERATIVO</span>
@@ -542,7 +494,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="steps-stepper">
                     <div class="step-card">
                         <div class="step-index">01</div>
@@ -580,8 +531,6 @@
         </div>
     </div>
 </section>
-
-<!-- 10. DESARROLLO, 11. EQUIPO, 12. TECNOLOGÍAS Y 19. USO DE IA -->
 <section id="desarrollo" class="content-section">
     <div class="section-container">
         <h2>DESARROLLO Y PRODUCCIÓN</h2>
@@ -612,8 +561,7 @@
                                     y creación de entornos postapocalípticos.</p>
                             </div>
                         </div>
-            </div>
-            
+                    </div>
             <div class="interactive-card team-card">
                 <h3>EQUIPO DE DESARROLLO</h3>
                 <div class="team-list">
@@ -626,26 +574,24 @@
                     <div class="team-member">
                         <div class="member-info">
                             <span class="member-name">Mariana Antonio Hernández</span>
-                            <span class="member-role art-design">Diseño de Personajes y Programación</span>
+                            <span class="member-role art-design">Diseño de Personajes / Programación</span>
                         </div>
                     </div>
                     <div class="team-member">
                         <div class="member-info">
                             <span class="member-name">Lizbeth Ruiz González</span>
-                            <span class="member-role art-design">Programación General y Colaboradora</span>
+                            <span class="member-role art-design">Programación General / Colaboradora</span>
                         </div>
                     </div>
                     <div class="team-member">
                         <div class="member-info">
                             <span class="member-name">Raúl Emmanuel Márquez Hernández</span>
-                            <span class="member-role dev-lead">Programación General y Desarrollador</span>
+                            <span class="member-role dev-lead">Programación General / Desarrollador</span>
                         </div>
                     </div>
                     <div class="team-badge">Equipo Toxic Horizon</div>
                 </div>
             </div>
-
-
             <div class="interactive-card tech-card-new">
                 <h3>TECNOLOGÍAS UTILIZADAS</h3>
                 <div class="tech-grid">
@@ -675,13 +621,10 @@
         </div>
     </div>
 </section>
-
-<!-- 13 a 18: LEGAL, CRÉDITOS, ADVERTENCIAS Y CONTACTO -->
 <section id="creditos-licencias" class="content-section">
     <div class="section-container">
         <h2>MARCO LEGAL Y CRÉDITOS</h2>
         <div class="legal-grid">
-
             <div class="legal-card border-purple">
                 <div class="legal-header">
                     <span class="legal-icon icon-purple">🎵</span>
@@ -696,7 +639,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="legal-card border-green">
                 <div class="legal-header">
                     <span class="legal-icon icon-green">📄</span>
@@ -712,7 +654,6 @@
                         al equipo de desarrollo.</p>
                 </div>
             </div>
-
             <div class="legal-card border-purple">
                 <div class="legal-header">
                     <span class="legal-icon icon-purple">🔒</span>
@@ -726,7 +667,6 @@
                         de ubicación o información sensible de los jugadores.</p>
                 </div>
             </div>
-
             <div class="legal-card border-green">
                 <div class="legal-header">
                     <span class="legal-icon icon-green">⚠️</span>
@@ -738,7 +678,6 @@
                         atmósfera de tensión y efectos visuales de radiación.</p>
                 </div>
             </div>
-
             <div class="legal-card border-purple">
                 <div class="legal-header">
                     <span class="legal-icon icon-purple">🎓</span>
@@ -749,7 +688,6 @@
                     <p>Esta entrega se proporciona <strong>"tal cual" (as-is)</strong>, con fines estrictamente académicos y sin garantías de compatibilidad o soporte técnico comercial.</p>
                 </div>
             </div>
-
             <div class="legal-card border-green">
                 <div class="legal-header">
                     <span class="legal-icon icon-green">✉️</span>
@@ -766,7 +704,6 @@
         </div>
     </div>
 </section>
-
     <footer class="main-footer">
         <div class="section-container">
             <p>&copy; 2026 Toxic Horizon Studio. Todos los derechos reservados.</p>
@@ -775,10 +712,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- VENTANAS MODALES (HISTORIA Y LORE DE TOXIC HORIZON) -->
-
-    <!-- Modal 1: El Gran Colapso -->
     <div id="modal-colapso" class="modal-overlay">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -795,8 +728,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal 2: Las Criaturas Mutadas -->
     <div id="modal-criaturas" class="modal-overlay">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -812,8 +743,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal 3: Kaell -->
     <div id="modal-kaell" class="modal-overlay">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -829,8 +758,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal 4: Las Semillas del Edén -->
     <div id="modal-semillas" class="modal-overlay">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -845,9 +772,7 @@
             </div>
         </div>
     </div>
-
     <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 </html>

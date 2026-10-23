@@ -1,10 +1,5 @@
-/* ============================================================
-   ANIMACIONES ESPECÍFICAS (js/animations.js)
-============================================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Animación de "Flotado" para la imagen del personaje Hero
     const heroCharacter = document.querySelector('.floating-character');
     if (heroCharacter) {
         animateFloating(heroCharacter);
@@ -12,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function animateFloating(element) {
         let startTime = null;
-        const amplitude = 15; // Cuántos píxeles flota
-        const speed = 0.001; // Velocidad de la flotación
+        const amplitude = 15;
+        const speed = 0.001;
 
         function step(timestamp) {
             if (!startTime) startTime = timestamp;
@@ -26,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(step);
     }
 
-    // 2. Animación de Entrada para items de galería (usando Intersection Observer)
     const galleryItems = document.querySelectorAll('.gallery-item');
     
     if ('IntersectionObserver' in window) {
@@ -39,27 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, {
             rootMargin: '0px',
-            threshold: 0.1 // Cuánto debe estar visible para activarse
+            threshold: 0.1
         });
 
         galleryItems.forEach(item => {
-            item.classList.add('fade-in-hidden'); // Añade clase oculta inicial
+            item.classList.add('fade-in-hidden'); 
             observer.observe(item);
         });
     }
 });
-
-/* Estilos CSS adicionales para la animación de fade-in */
-/* (Puedes añadir esto al final de styles.css para que funcione) */
-/*
-.fade-in-hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-in-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/

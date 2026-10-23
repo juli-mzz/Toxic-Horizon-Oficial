@@ -12,7 +12,6 @@ const ASSETS_TO_CACHE = [
   './img/icon-512.png'
 ];
 
-// Evento de Instalación: Guarda los recursos en caché
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -23,7 +22,6 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-// Evento de Activación: Limpia cachés antiguas
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -40,7 +38,6 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Evento Fetch: Estrategia Cache First con respaldo en Red
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {

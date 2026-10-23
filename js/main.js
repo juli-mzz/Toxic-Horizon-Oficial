@@ -1,23 +1,17 @@
-// ============================================================
-// FUNCIÓN GLOBAL PARA ABRIR MODAL DESDE ONCLICK
-// ============================================================
 window.openModal = function(archiveKey) {
-    // Si tus modales tienen id="modal-colapso", o id="colapso", busca ambos casos
     const targetModal = document.getElementById(`modal-${archiveKey}`) || document.getElementById(archiveKey);
     if (targetModal) {
         targetModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Bloquea el scroll de fondo
+        document.body.style.overflow = 'hidden'; 
     }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // LÓGICA PARA ABRIR Y CERRAR VENTANAS MODALES DE LORE 
     const openBtns = document.querySelectorAll('.btn-modal, .btn-lore-action');
     const closeBtns = document.querySelectorAll('.close-modal, .modal-close-btn');
     const overlays = document.querySelectorAll('.modal-overlay');
 
-    // Abrir Modal al dar clic en los botones
     openBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const modalId = btn.getAttribute('data-target') || btn.getAttribute('data-archive');
@@ -31,18 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Cerrar Modal al dar clic en la equis (×)
     closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const activeModal = btn.closest('.modal-overlay');
             if (activeModal) {
                 activeModal.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Restablece el scroll
+                document.body.style.overflow = 'auto'; 
             }
         });
     });
 
-    // Cerrar Modal al dar clic en el área oscura fuera del cuadro de texto
     overlays.forEach(overlay => {
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) {
@@ -52,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Cerrar Modal con la tecla ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             overlays.forEach(overlay => {
@@ -64,9 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --------------------------------------------------------
-    // ESTILO DEL HEADER AL HACER SCROLL
-    // --------------------------------------------------------
     const header = document.querySelector('.main-header');
     if (header) {
         window.addEventListener('scroll', () => {
@@ -78,9 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --------------------------------------------------------
-    // CONTROL DE MENÚS DESPLEGABLES EN CASCADA
-    // --------------------------------------------------------
     const dropdownItems = document.querySelectorAll('.dropdown-item');
 
     dropdownItems.forEach(item => {
@@ -88,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (trigger) {
             trigger.addEventListener('click', (e) => {
                 e.stopPropagation();
-                // Cierra cualquier otro desplegable abierto
                 dropdownItems.forEach(other => {
                     if (other !== item) other.classList.remove('active');
                 });
@@ -97,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Cerrar cualquier menú al hacer clic en un enlace interno o fuera del menú
     document.addEventListener('click', (e) => {
         dropdownItems.forEach(item => {
             if (!item.contains(e.target)) {
@@ -107,9 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ------------------------------------------------------------
-// REGISTRO DE SERVICE WORKER (PWA)
-// ------------------------------------------------------------
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
