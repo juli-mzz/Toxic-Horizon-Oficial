@@ -38,4 +38,4 @@ jobs:
         run: npm ci
 
       - name: Validate HTML, CSS and JavaScript
-        run: npm run checkg
+        run: npm run check
