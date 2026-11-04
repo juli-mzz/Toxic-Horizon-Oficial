@@ -16,6 +16,7 @@
   "dependencies": {
     "eslint": "^10.11.0",
     "html-validate": "^10.9.0",
-    "stylelint-config-standard": "^40.0.0"
+    "stylelint-config-standard": "^40.0.0",
+    "web-push": "^3.6.7"
   }
 }

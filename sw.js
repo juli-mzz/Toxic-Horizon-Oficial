@@ -1,4 +1,4 @@
-const CACHE_NAME = 'toxic-horizon-v1';
+const CACHE_NAME = 'toxic-horizon-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -12,16 +12,21 @@ const ASSETS_TO_CACHE = [
   './img/icon-512.png'
 ];
 
+// 1. INSTALACIÓN
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Precaché de recursos completado');
-      return cache.addAll(ASSETS_TO_CACHE);
+      console.log('[Service Worker] Precaché de recursos iniciado');
+      // Usamos map/catch para evitar que un recurso faltante rompa toda la instalación
+      return Promise.allSettled(
+        ASSETS_TO_CACHE.map((url) => cache.add(url))
+      );
     })
   );
-  self.skipWaiting();
 });
 
+// 2. ACTIVACIÓN INMEDIATA
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keyList) => {
@@ -33,11 +38,11 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
-    })
+    }).then(() => clients.claim())
   );
-  self.clients.claim();
 });
 
+// 3. ESTRATEGIA DE RED / CACHÉ
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
@@ -45,11 +50,60 @@ self.addEventListener('fetch', (event) => {
         return cachedResponse;
       }
       return fetch(event.request).catch(() => {
-        // En caso de fallo de red en navegación, se devuelve el HTML principal en caché
         if (event.request.mode === 'navigate') {
           return caches.match('./index.html');
         }
       });
+    })
+  );
+});
+
+// 4. RECEPCIÓN DE NOTIFICACIÓN PUSH
+self.addEventListener('push', (event) => {
+  let data = {
+    title: 'Toxic Horizon',
+    body: '¡Actividad detectada en el sector radiactivo!',
+    url: './'
+  };
+
+  if (event.data) {
+    try {
+      data = event.data.json();
+    } catch (e) {
+      data.body = event.data.text();
+    }
+  }
+
+  const options = {
+    body: data.body,
+    icon: './img/icon-192.png',
+    badge: './img/icon-192.png',
+    vibrate: [150, 50, 150],
+    data: {
+      url: data.url || './'
+    }
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(data.title, options)
+  );
+});
+
+// 5. CLIC EN LA NOTIFICACIÓN
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetUrl = event.notification.data?.url || './';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
+      for (const client of clientList) {
+        if (client.url.includes(targetUrl) && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      if (clients.openWindow) {
+        return clients.openWindow(targetUrl);
+      }
     })
   );
 });
