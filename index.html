@@ -109,7 +109,7 @@
                                 <ul class="mega-sublist">
                                     <li><a href="#creditos-licencias">Créditos y Recursos</a></li>
                                     <li><a href="#licencias">Licencias de Código</a></li>
-                                    <li><a href="#privacidad">Aviso de Privacidad</a></li>
+                                    <li><a href="#privacidad">Aviso y Política de Privacidad</a></li>
                                 </ul>
                             </div>
                             <div class="mega-col">
@@ -125,7 +125,9 @@
                 </li>
 
                 <li><a href="#descarga" class="btn-primary-mini">Descargar .exe</a></li>
-                <button id="btn-subscribe" class="btn-action" onclick="subscribeUserToPush()">ACTIVAR ALERTAS</button>
+                <button id="btn-subscribe" class="btn-alerts" onclick="subscribeUserToPush()">
+                  <span class="bell-icon">🔔</span> ACTIVAR ALERTAS
+              </button>
             </ul>
         </nav>
     </div>
@@ -656,16 +658,39 @@
             <div class="legal-card border-purple">
                 <div class="legal-header">
                     <span class="legal-icon icon-purple">🔒</span>
-                    <h3>AVISO DE PRIVACIDAD</h3>
+                    <h3>AVISO DE PRIVACIDAD Y POLÍTICA DE PRIVACIDAD</h3>
                 </div>
                 <div class="legal-content">
                     <div class="security-banner">
-                        <span class="sec-dot"></span> 100% SEGURO
+                        <span class="sec-dot"></span> 100% SEGURO</span>
                     </div>
                     <p><strong>Toxic Horizon</strong> no recopila, almacena, comparte ni transmite ningún tipo de dato personal, 
                         de ubicación o información sensible de los jugadores.</p>
+                    <button type="button" class="btn-lore-action" onclick="openModal('privacidad')" style="margin-top: 12px;">
+                        Leer política completa</button>
                 </div>
-            </div>
+                        <div id="modal-privacidad" class="modal-overlay">
+                    <div class="modal-content" style="max-width: 650px; max-height: 85vh; overflow-y: auto; text-align: left;">
+                     <button type="button" class="close-modal" aria-label="Cerrar">&times;</button>
+
+        
+                <span class="badge-secure" style="margin-bottom: 10px; display: inline-block;">DOCUMENTO LEGAL • 2026</span>
+                    <h2 style="margin-bottom: 16px;">Política de Privacidad — Toxic Horizon</h2>
+
+                <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.92rem; line-height: 1.6; color: #d4d4d8;">
+                     <p><strong>1. Sin recolección de datos:</strong> <em>Toxic Horizon</em> (versión web y edición móvil) es un proyecto independiente y académico que opera de forma autónoma. No recopilamos, almacenamos en servidores externos ni compartimos datos personales, ubicación GPS, contactos ni identificadores publicitarios.</p>
+                     <p><strong>2. Almacenamiento local:</strong> El progreso de la partida (restauración de biomas e inventario de Kaell), los ajustes de controles y la caché de recursos (PWA) se guardan únicamente en la memoria interna de tu dispositivo y se eliminan al desinstalar la aplicación o limpiar los datos del navegador.</p>
+                <p><strong>3. Permisos del sistema:</strong></p>
+            <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                <li><strong>Notificaciones Push (Opcional):</strong> Si activas las alertas, el sistema genera un token técnico anónimo para enviarte avisos del proyecto. Puedes desactivarlas en cualquier momento desde los ajustes de tu navegador o dispositivo.</li>
+            </ul>
+            <p>
+                <strong>4. Seguridad y Contacto:</strong> Clasificado para mayores de 13 años (<strong>T / +13</strong>), sin chats abiertos ni compras integradas. Para dudas o reportes técnicos, contáctanos a través de nuestro portal oficial en GitHub.
+            </p>
+        </div>
+    </div>
+</div>
+                </div>
             <div class="legal-card border-green">
                 <div class="legal-header">
                     <span class="legal-icon icon-green">⚠️</span>
